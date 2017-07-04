@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import { createStore } from 'redux';
+import reducers from './js/reducers'
+import Root from './js/root';
+
+let store = createStore(reducers);
 
 ReactDom.render(
-    <h1>Hello, world!</h1>,
+    <Root store={store} />,
     document.getElementById('root')
 );
