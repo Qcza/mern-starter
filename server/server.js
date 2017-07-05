@@ -16,8 +16,12 @@ mongoose.Promise = Promise;
 const Text = model.Text;
 
 //queries
+const checkQuery = (query) => {
+    assert.equal(query.exec().constructor, Promise);
+};
 const textsQuery = Text.find({});
-assert.equal(textsQuery.exec().constructor, Promise);
+checkQuery(textsQuery);
+
 
 const seedHelloWorld = () => {
     textsQuery.exec().then((res)=>{
@@ -44,5 +48,9 @@ app.get('/texts', (req, res)=>{
 });
 
 app.listen(3000, ()=>{
-    console.log('listetning on 3000');
+    console.log('Server listening on 3000');
 });
+
+exports.seedHelloWorld = seedHelloWorld;
+exports.checkQuery = checkQuery;
+exports.textsQuery = textsQuery;

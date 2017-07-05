@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node ./server/server.js",
     "dev": "concurrently \"npm start\" \"webpack -d --config webpack.config.js --watch\"",
-    "prod": "webpack -p --config webpack.config.js --define process.env.NODE_ENV='\"production\"'"
+    "prod": "webpack -p --config webpack.config.js --define process.env.NODE_ENV='\"production\"'",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Qcza",
