@@ -1,10 +1,10 @@
-#MERN-STARTER
+# MERN-STARTER
 - Mongo w/ mongoose https://www.mongodb.com/ , http://mongoosejs.com/
 - Express https://expressjs.com/
 - React w/ Redux https://facebook.github.io/react/ , http://reduxjs.org/
 - Node https://nodejs.org
 
-##npm
+## npm
 Run server
 ```npm
 npm start
