@@ -4,7 +4,7 @@
   "description": "MERN starter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Qcza/mean-starter"
+    "url": "https://github.com/Qcza/mern-starter"
   },
   "scripts": {
     "start": "node ./server/server.js",
