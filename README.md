@@ -17,5 +17,5 @@ npm run dev
 
 Compile webpack with -p flag and set NODE_ENV on 'production'
 ```npm
-npm run production
+npm run prod
 ```
