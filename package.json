@@ -5,8 +5,7 @@
   "scripts": {
     "start": "node ./server/server.js",
     "dev": "concurrently \"npm start\" \"webpack -d --config webpack.config.js --watch\"",
-    "build:dev": "webpack -d --config webpack.config.js --define process.env.NODE_ENV='\"development\"'",
-    "build:prod": "webpack -p --config webpack.config.js --define process.env.NODE_ENV='\"production\"'"
+    "prod": "webpack -p --config webpack.config.js --define process.env.NODE_ENV='\"production\"'"
   },
   "keywords": [],
   "author": "Qcza",
@@ -18,7 +17,8 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
-    "redux": "^3.7.1"
+    "redux": "^3.7.1",
+    "redux-logger": "^3.0.6"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
