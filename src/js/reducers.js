@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { CHANGE_COLOR } from './actionTypes';
+import { CHANGE_COLOR, GET_TEXT } from './actionTypes';
 
 function changeColorReducer (state=null, action) {
     switch (action.type) {
@@ -10,6 +10,16 @@ function changeColorReducer (state=null, action) {
     }
 }
 
+function getTextReducer (state=null, action) {
+    switch (action.type) {
+        case GET_TEXT:
+            return action.text;
+        default:
+            return state
+    }
+}
+
 export default combineReducers ({
-    color: changeColorReducer
+    color: changeColorReducer,
+    text: getTextReducer
 })

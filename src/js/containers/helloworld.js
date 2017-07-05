@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import HelloWorld from '../components/helloworld';
-import { changeColor } from '../actions';
+import { changeColor, fetchText } from '../actions';
 
 const mapStateToProps = state => {
     return {
-        color: state.color
+        color: state.color,
+        text: state.text
     }
 };
 
@@ -12,6 +13,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         changeColor: color => {
             dispatch(changeColor(color))
+        },
+        fetchText: () => {
+            dispatch(fetchText())
         }
     }
 };
