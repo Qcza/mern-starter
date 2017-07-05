@@ -2,6 +2,10 @@
   "name": "MERN_starter",
   "version": "1.0.0",
   "description": "MERN starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Qcza/mean-starter"
+  },
   "scripts": {
     "start": "node ./server/server.js",
     "dev": "concurrently \"npm start\" \"webpack -d --config webpack.config.js --watch\"",
