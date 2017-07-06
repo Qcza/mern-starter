@@ -1,7 +1,7 @@
 const express = require('express');
-const server = require('../server/server');
+const server = require('../../server/server');
 const mongoose = require('mongoose');
-const model = require('../server/model');
+const model = require('../../server/model');
 const seedHelloWorld = server.seedHelloWorld;
 
 mongoose.connect('mongodb://localhost/testing', {
