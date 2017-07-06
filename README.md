@@ -19,3 +19,8 @@ Compile webpack with -p flag and set NODE_ENV on 'production'
 ```npm
 npm run prod
 ```
+
+Run unit tests, using Jest (https://facebook.github.io/jest/)
+```npm
+npm test
+```
