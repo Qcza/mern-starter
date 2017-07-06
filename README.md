@@ -1,6 +1,6 @@
 # MERN-STARTER
-[![dependencies Status](https://david-dm.org/Qcza/mern-starter/status.svg)](https://david-dm.org/Qcza/mean-starter)
-[![devDependencies Status](https://david-dm.org/Qcza/mern-starter/dev-status.svg)](https://david-dm.org/Qcza/mean-starter?type=dev)
+[![dependencies Status](https://david-dm.org/Qcza/mern-starter/status.svg)](https://david-dm.org/Qcza/mern-starter)
+[![devDependencies Status](https://david-dm.org/Qcza/mern-starter/dev-status.svg)](https://david-dm.org/Qcza/mern-starter?type=dev)
 
 - Mongo w/ mongoose https://www.mongodb.com/ , http://mongoosejs.com/
 - Express https://expressjs.com/
