@@ -1,9 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-const extractSass = new ExtractTextPlugin({
-    filename: "[name].[contenthash].css",
-});
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: ['babel-polyfill', './src/index.js'],
@@ -20,17 +17,25 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [{
-                    loader: "style-loader"
-                }, {
-                    loader: "css-loader"
-                }, {
-                    loader: "sass-loader"
-                }]
+                use: ExtractTextPlugin.extract({
+                    use: [{
+                      loader: 'css-loader'
+                    }, {
+                      loader: 'sass-loader'
+                    }],
+                    fallback: 'style-loader'
+                })
             }
         ]
     },
-    plugins: [
-        extractSass
-    ]
+  plugins: [
+    new ExtractTextPlugin({
+      filename: '[name].[contenthash].css',
+      disable: process.env.NODE_ENV !== "production"
+    }),
+    new HtmlWebpackPlugin({
+      title: 'MERN-Starter',
+      template: './src/index.ejs'
+    })
+  ]
 };
